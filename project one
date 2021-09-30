@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	//variables to hold onto each princess' score:
+	int camper = 0;
+	int toxic = 0;
+	int sweat = 0;
+	int car = 0;
+	int loothoger = 0;
+	char choice; //variable to hold user input
+
+	cout << "Welcome to warzone quiz!" << endl;
+
+	//question 1
+	cout << "What's your plystyle? (p)assive, (a)ggresive, (t)ryhard, (c)ar, (l)oothoger" << endl;
+	cin >> choice;
+	if (choice == 'p')
+		toxic = toxic + 1; //long way to add one
+	else if (choice == 'a')
+		camper += 1; //shorter way to add one
+	else if (choice == 't')
+		sweat++; //shortest way to add one
+	else if (choice == 'c')
+		car++; //shortest way to add one
+	else if (choice == 'l')
+		loothoger++; //shortest way to add one
+	else
+		cout << "not an option, dummy" << endl;
+
+
+	//check which princess has the biggest score
+	//the symbol "&&" means AND
+	if (camper >= toxic && camper >= sweat && camper >= car && camper >= loothoger)
+		cout << "CAMPER LMAO HAHAHAHA" << endl;
+	else if (toxic >= camper && toxic >= sweat && toxic >= car && toxic >= loothoger)
+		cout << "you are toxic and dogwater at the game" << endl;
+	else if (sweat >= camper && sweat >= toxic && sweat >= car && sweat >= loothoger)
+		cout << "go touch some grass you sweat" << endl;
+	else if (car >= camper && car >= toxic && car >= sweat && car >= loothoger)
+		cout << "Use your legs BOZO" << endl;
+	else if (loothoger >= camper && loothoger >= toxic && loothoger >= sweat && loothoger >= car)
+		cout << "LEARN TO SHARE!" << endl;
+
+}
